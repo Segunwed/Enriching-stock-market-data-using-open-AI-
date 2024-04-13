@@ -4,8 +4,11 @@ import os
 import pandas as pd
 from openai import OpenAI
 
+# Set your OpenAI API key here
+api_key = "YOUR_OPENAI_API_KEY"
+
 # Instantiate an API client
-client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+client = OpenAI(api_key=api_key)
 
 # Read in the two datasets
 nasdaq100 = pd.read_csv("nasdaq100.csv")
@@ -51,4 +54,7 @@ response = client.chat.completions.create(
 
 # Store the output as a variable and print the recommendations
 stock_recommendations = response.choices[0].message.content
-print(stock_recommendations)
+print(stock_recommendations
+
+
+# dont forget ur unique key
